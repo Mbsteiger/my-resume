@@ -10,15 +10,15 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/songs')
-def show_all_songs():
-    songs = [
-        'Paradise',
-        'Yellow',
-        'Viva La Vida'
+@app.route('/courses')
+def show_all_courses():
+    courses = [
+        'MISY160',
+        'MISY330',
+        'ACCT208'
     ]
 
-    return render_template('song-all.html', songs=songs)
+    return render_template('course-all.html', courses=courses)
 
 
 @app.route('/about')
@@ -49,7 +49,7 @@ def get_user_name(name):
     return render_template('user.html', name=name)
 
 
-@app.route('/song/<int:id>/')
+@app.route('/course/<int:id>/')
 def get_song_id(id):
     # return "This song's ID is " + str(id)
     return "Hi, this is %s and the song's id is %d" % ('administrator', id)
